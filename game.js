@@ -45,7 +45,8 @@ function checkAnswer(currentLevel) {
     setTimeout(function() {
       $('body').removeClass('game-over');
     }, 200);
-    $('#level-title').html("Game Over,<kn> Your Level:"+(level-1)+" </kn>Press Any Key/Click here to Restart.");
+    level = (level == 0) ? 0 : level-1;
+    $('#level-title').html("Game Over,<kn> Your Level:"+level+" </kn>Press Any Key/Click here to Restart.");
     startOver();
   }
 }
